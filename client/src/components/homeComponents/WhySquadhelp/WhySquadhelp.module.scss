@@ -1,0 +1,41 @@
+.container__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin underline {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100px;
+  }
+}
+
+.blueUnderline {
+  @include underline;
+
+  &:after {
+    background: #455a89;
+  }
+}
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
