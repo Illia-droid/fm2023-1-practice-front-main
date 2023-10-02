@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { getUser } from '../../store/slices/userSlice';
-import Spinner from '../Spinner/Spinner';
+import { getUser } from '../../../store/slices/userSlice';
+import Spinner from '../../Spinner/Spinner';
 
-const PrivateHoc = (Component, props) => {
+const withAuth = (Component, props) => {
   class Hoc extends React.Component {
-    componentDidMount () {
+    componentDidMount() {
       if (!this.props.data) {
         this.props.getUser();
       }
     }
 
-    render () {
-      if (this.props.error) return <Redirect to='/' />;
+    render() {
+      if (this.props.error) return <Redirect to="/" />;
 
       return (
         <>
@@ -31,13 +31,13 @@ const PrivateHoc = (Component, props) => {
     }
   }
 
-  const mapStateToProps = state => state.userStore;
+  const mapStateToProps = (state) => state.userStore;
 
-  const mapDispatchToProps = dispatch => ({
+  const mapDispatchToProps = (dispatch) => ({
     getUser: () => dispatch(getUser()),
   });
 
   return connect(mapStateToProps, mapDispatchToProps)(Hoc);
 };
 
-export default PrivateHoc;
+export default withAuth;
