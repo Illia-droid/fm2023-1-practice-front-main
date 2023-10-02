@@ -1,11 +1,13 @@
 import React from 'react';
 import CONSTANTS from '../../../constants';
 import styles from './WhySquadhelp.module.scss';
+
 const WhySquadhelp = () => {
   return (
     <div className={styles.container__description}>
       <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
       <div className={styles.cardContainer}>
+        {}
         <div className={styles.card}>
           <img
             src={`${CONSTANTS.STATIC_IMAGES_PATH}more-benifits-world-icon.png`}
