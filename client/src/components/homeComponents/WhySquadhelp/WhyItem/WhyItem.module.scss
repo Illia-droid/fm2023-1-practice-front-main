@@ -27,6 +27,10 @@
     margin-right: 0;
   }
 
+  @media screen and (max-width: 995px) {
+    margin: 20px;
+  }
+
   @media screen and (max-width: 768px) {
     max-width: 100%;
     margin: 40px;

@@ -7,16 +7,16 @@ const override = css`
   border-color: #46568a;
 `;
 
-const SpinnerLoader = props => (
+const SpinnerLoader = (props) => (
   <div
     style={{ marginTop: props.mtop ? 30 : undefined }}
     className={styles.loaderContainer}
   >
     <ClipLoader
-      sizeUnit='px'
+      sizeUnit="px"
       css={override}
       size={50}
-      color='#46568a'
+      color="#46568a"
       loading
     />
   </div>
