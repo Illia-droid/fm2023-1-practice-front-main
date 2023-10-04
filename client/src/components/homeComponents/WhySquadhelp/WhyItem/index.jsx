@@ -1,5 +1,5 @@
 import React from 'react';
-import CONSTANTS from '../../constants';
+import CONSTANTS from '../../../../constants';
 import styles from './WhyItem.module.scss';
 
 const WhyItem = ({ item: { src, alt, title, content } }) => {
