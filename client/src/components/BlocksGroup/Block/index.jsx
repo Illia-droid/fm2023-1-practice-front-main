@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Block.module.scss';
 import cx from 'classnames';
+
 const Block = (props) => {
   const {
     item: { title, content },

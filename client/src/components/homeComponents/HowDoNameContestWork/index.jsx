@@ -8,6 +8,7 @@ const HowDoNameContestWork = () => {
   return (
     <>
       <h2>How Do Name Contest Work?</h2>
+
       {dataStepItem.map(renderStepItems)}
     </>
   );
