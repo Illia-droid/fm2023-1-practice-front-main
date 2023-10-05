@@ -14,9 +14,9 @@
     "classItemRow": "step",
     "stepName": "Step 2: Ideas start pouring in within minutes",
     "stepDescription1": "100s of naming experts start submitting name ideas",
-    "stepDescription2": "Names automatically checked for URL availability",
+    "stepDescription2": "Names automatically checked for URL availabilit",
     "stepDescription3": null,
-    "src": "gif/2-compressed.gif",
+    "src": "gif/2-compressed-new.gif",
     "alt": "compressed"
   },
   {
@@ -25,7 +25,7 @@
     "stepName": "Step 3: Rate Entries & Brainstorm with Creatives",
     "stepDescription1": "Provide instant feedback on Names",
     "stepDescription2": "Send private feedback or public messages to all creatives",
-    "stepDescription3": "The more entries you rate - the submissions get better andbetter",
+    "stepDescription3": "The more entries you rate - the submissions get better and better",
     "src": "gif/3-compressed.gif",
     "alt": "compressed"
   }
