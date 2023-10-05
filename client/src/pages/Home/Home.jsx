@@ -9,6 +9,7 @@ import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
 import WhySquadhelp from '../../components/homeComponents/WhySquadhelp';
+import HowDoNameContestWork from '../../components/homeComponents/HowDoNameContestWork';
 // import BlocksGroup from '../../components/BlocksGroup';
 
 const Home = (props) => {
@@ -158,7 +159,8 @@ const Home = (props) => {
                 </div>
               </div>
             </div>
-            <h2>How Do Name Contest Work?</h2>
+            <HowDoNameContestWork />
+            {/* <h2>How Do Name Contest Work?</h2>
             <div className={styles.whiteContainer}>
               <div className={styles.stepReverse}>
                 <div>
@@ -234,7 +236,7 @@ const Home = (props) => {
                   alt="compressed"
                 />
               </div>
-            </div>
+            </div> */}
             <div className={styles.headerBar}>
               <h3>Names For Sale</h3>
               <p className={styles.blueUnderline}>
