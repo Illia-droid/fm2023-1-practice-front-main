@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Header from '../../components/Header/Header';
+
 import CONSTANTS from '../../constants';
-import SlideBar from '../../components/SlideBar/SlideBar';
-import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.sass';
 import carouselConstants from '../../carouselConstants';
+
 import Spinner from '../../components/Spinner/Spinner';
 import WhySquadhelp from '../../components/homeComponents/WhySquadhelp';
-// import BlocksGroup from '../../components/BlocksGroup';
+import HowDoNameContestWork from '../../components/homeComponents/HowDoNameContestWork';
+import BlocksGroup from '../../components/BlocksGroup';
+import SlideBar from '../../components/SlideBar/SlideBar';
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
@@ -33,7 +36,6 @@ const Home = (props) => {
     ];
   return (
     <>
-      {/* <BlocksGroup content={contentBlocks} /> */}
       <Header />
       {isFetching ? (
         <Spinner mtop />
@@ -56,6 +58,7 @@ const Home = (props) => {
                   DASHBOARD
                 </Link>
               </div>
+              <BlocksGroup />
             </div>
             <div className={styles.greyContainer}>
               <SlideBar
@@ -64,52 +67,6 @@ const Home = (props) => {
               />
             </div>
             <WhySquadhelp />
-            {/* <div className={styles.container__description}>
-              <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
-              <div className={styles.cardContainer}>
-                <div className={styles.card}>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}more-benifits-world-icon.png`}
-                    alt="globe"
-                  />
-                  <h3>Largest Naming Community</h3>
-                  <p>
-                    Our unique approach allows you to receive an unmatched
-                    breadth of business name ideas from world's largest
-                    community of naming experts. With 75,000+ creatives and
-                    15,000+ successful naming projects, Squadhelp is by far the
-                    largest naming platform across the globe .
-                  </p>
-                </div>
-                <div className={styles.card}>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}more-benifits-high-quality-icon.png`}
-                    alt="desktop"
-                  />
-                  <h3>High Quality & Collaboration</h3>
-                  <p>
-                    Using an advanced Quality Scoring Algorithm and Machine
-                    Learning, we ensure that you receive more ideas from our
-                    top-quality creatives, and Gamification best practices
-                    ensure two-way communication throughout your contest.
-                  </p>
-                </div>
-                <div className={styles.card}>
-                  <img
-                    src={`${CONSTANTS.STATIC_IMAGES_PATH}more-benifits-trademark-icon.png`}
-                    alt="cards"
-                  />
-                  <h3>Agency-Level Features</h3>
-                  <p>
-                    Squadhelp's high end Audience Testing service allows you to
-                    poll your target demographics to get unbiased feedback on
-                    your favorite names. Also receive Trademark support from our
-                    team of Licensed Trademark Attorneys, so you can pick your
-                    name with confidence.
-                  </p>
-                </div>
-              </div>
-            </div> */}
             <div className={styles.greyContainer}>
               <div className={styles.adv}>
                 <div className={styles.images}>
@@ -158,83 +115,9 @@ const Home = (props) => {
                 </div>
               </div>
             </div>
-            <h2>How Do Name Contest Work?</h2>
-            <div className={styles.whiteContainer}>
-              <div className={styles.stepReverse}>
-                <div>
-                  <h3>Step 1: Launch a Naming Contest</h3>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>
-                      Start your project right with our proven Naming Brief
-                      template
-                    </span>
-                  </p>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>
-                      We’ll walk you through exactly what you need to share
-                      about your project in order to get an awesome Name
-                    </span>
-                  </p>
-                </div>
-                <img
-                  src={`${CONSTANTS.STATIC_IMAGES_PATH}gif/1-compressed.gif`}
-                  alt="compressed"
-                />
-              </div>
-            </div>
-            <div className={styles.greenContainer}>
-              <div className={styles.step}>
-                <img
-                  src={`${CONSTANTS.STATIC_IMAGES_PATH}gif/2-compressed-new.gif`}
-                  alt="compressed"
-                />
-                <div className={styles.greenStep}>
-                  <h3>Step 2: Ideas start pouring in within minutes</h3>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>
-                      100s of naming experts start submitting name ideas
-                    </span>
-                  </p>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>
-                      Names automatically checked for URL availability
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.greyContainer}>
-              <div className={styles.stepReverse}>
-                <div>
-                  <h3>Step 3: Rate Entries & Brainstorm with Creatives</h3>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>Provide instant feedback on Names</span>
-                  </p>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>
-                      Send private feedback or public messages to all creatives
-                    </span>
-                  </p>
-                  <p>
-                    <i className="fas fa-check" />
-                    <span>
-                      The more entries you rate - the submissions get better and
-                      better
-                    </span>
-                  </p>
-                </div>
-                <img
-                  src={`${CONSTANTS.STATIC_IMAGES_PATH}gif/3-compressed.gif`}
-                  alt="compressed"
-                />
-              </div>
-            </div>
+
+            <HowDoNameContestWork />
+
             <div className={styles.headerBar}>
               <h3>Names For Sale</h3>
               <p className={styles.blueUnderline}>
