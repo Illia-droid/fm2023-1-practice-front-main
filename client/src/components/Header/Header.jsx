@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, NavLink } from 'react-router-dom';
 import styles from './Header.module.sass';
 import CONSTANTS from '../../constants';
 import { clearUserStore } from '../../store/slices/userSlice';
@@ -170,7 +170,7 @@ const Header = (props) => {
                     <a href="/">HOW IT WORKS</a>
                   </li>
                   <li>
-                    <a href="/">PRICING</a>
+                    <NavLink to="/pricing">Pricing</NavLink>
                   </li>
                   <li>
                     <a href="/">AGENCY SERVICE</a>
