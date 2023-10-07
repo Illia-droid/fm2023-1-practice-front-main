@@ -14,6 +14,15 @@ import SlideBar from '../../components/SlideBar/SlideBar';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 
+import data from './data.json';
+
+const {
+  contentBlocks: {
+    title: contentBlocksTitle,
+    description: contentBlocksDescription,
+  },
+} = data;
+
 const Home = (props) => {
   const [index, setIndex] = useState(0);
   const [styleName, setStyle] = useState(styles.headline__static);
@@ -58,7 +67,11 @@ const Home = (props) => {
                   DASHBOARD
                 </Link>
               </div>
-              <BlocksGroup />
+              <BlocksGroup content={contentBlocksTitle} idSelectedItem={1} />
+              <BlocksGroup
+                content={contentBlocksDescription}
+                idSelectedItem={1}
+              />
             </div>
             <div className={styles.greyContainer}>
               <SlideBar

@@ -1,5 +1,7 @@
 .block {
-  border: 1px solid transparent;
+  padding: 1rem;
+  margin: 20px;
+  border: 1px solid #ccc;
   border-radius: 5px;
   &__selected {
     border: 1px solid blue;

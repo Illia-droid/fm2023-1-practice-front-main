@@ -4,12 +4,16 @@ import cx from 'classnames';
 
 const Block = (props) => {
   const {
-    item: { title, content },
+    item: { id, title, content },
     isSelected,
+    setSelect,
   } = props;
   const classNames = cx(styles.block, { [styles.block__selected]: isSelected });
+  const handleSelect = () => {
+    setSelect(id);
+  };
   return (
-    <div className={classNames}>
+    <div className={classNames} onClick={handleSelect}>
       <strong>{title}</strong>
       <p>{content}</p>
     </div>

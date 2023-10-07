@@ -1,5 +1,33 @@
 {
   "contentBlocks": {
-    "title": [{ "title": "yes" }, { "title": "1" }]
+    "title": [
+      {
+        "id": 1,
+        "title": "yes",
+        "content": "But minor variations are allowed"
+      },
+      {
+        "id": 2,
+        "title": "yes",
+        "content": "The Domain variations are allowed"
+      }
+    ],
+    "description": [
+      {
+        "id": 1,
+        "title": "yes",
+        "content": "But minor variations are allowed"
+      },
+      {
+        "id": 2,
+        "title": "not",
+        "content": "The Domain variations are allowed"
+      },
+      {
+        "id": 3,
+        "title": "not",
+        "content": "The Domain variations are allowed"
+      }
+    ]
   }
 }
