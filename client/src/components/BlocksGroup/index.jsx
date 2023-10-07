@@ -11,7 +11,6 @@ const BlocksGroup = (props) => {
     setIdSelectItem(id);
   };
   const renderBlocks = content.map((block) => {
-    console.log(block.id);
     return (
       <Block
         key={block.id}
