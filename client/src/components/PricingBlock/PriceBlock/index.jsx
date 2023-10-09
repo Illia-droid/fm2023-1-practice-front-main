@@ -80,16 +80,18 @@ const PriceBlock = (props) => {
               if (typeof elem === 'string') {
                 return (
                   <li key={i}>
-                    <p>{ReactHtmlParser(elem)}</p>
+                    <p className={styles.contentWrapper__description}>
+                      {ReactHtmlParser(elem)}
+                    </p>
                   </li>
                 );
               }
               return (
-                <li key={i}>
-                  <p className={styles.forLine}>{elem.content}</p>
+                <li key={i} className={styles.forLine}>
+                  <p>{elem.content}</p>
                   {!isMobile && <em>{elem.hint}</em>}
                   {elem.items && (
-                    <ul>
+                    <ul className={styles.itemContent}>
                       {elem.items.map((item, i) => (
                         <li key={i}>
                           <p>

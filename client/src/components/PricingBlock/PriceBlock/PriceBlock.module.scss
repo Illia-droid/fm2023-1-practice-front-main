@@ -3,7 +3,7 @@
   width: 23%;
   border: 5px solid transparent;
   margin: 10px 0;
-
+  color: #666;
   &__title {
     display: flex;
     justify-content: space-between;
@@ -27,6 +27,9 @@
   @media screen and (max-width: 900px) {
     width: 100%;
   }
+  li {
+    position: relative;
+  }
   p {
     position: relative;
     padding: 5px;
@@ -35,10 +38,13 @@
 
   p + em {
     display: none;
-    position: absolute;
     width: 200px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 200px;
     z-index: 10;
-    background-color: aquamarine;
+    background-color: rgb(221, 237, 232);
   }
   p:hover + em {
     display: block;
@@ -48,11 +54,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 
   @media screen and (max-width: 900px) {
-    display: flex;
     flex-direction: row;
     align-items: center;
+    width: 0;
   }
 }
 
@@ -63,6 +70,7 @@
   }
 
   &__price {
+    width: 100%;
     margin-top: 5px;
     font-size: 28px;
     font-weight: 600;
@@ -75,10 +83,14 @@
   border: none;
 }
 .forLine {
+  padding-bottom: 10px;
   border-bottom: 2px solid rgba(128, 128, 128, 0.561);
 }
 .contentWrapper {
   padding: 0.7rem;
+  &__description {
+    margin-bottom: 10px;
+  }
 }
 .forGreyLine {
   @media screen and (max-width: 900px) {
@@ -86,12 +98,17 @@
     border-top: 1px solid rgba(128, 128, 128, 0.49);
   }
 }
+
+.itemContent {
+  min-width: 170px;
+  margin-left: 10px;
+}
 .btnStart {
   width: 100%;
   height: 50px;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
+
   color: #fff;
   font-size: 20px;
 }
