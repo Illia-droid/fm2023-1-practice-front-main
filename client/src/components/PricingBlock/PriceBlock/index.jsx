@@ -43,6 +43,37 @@ const PriceBlock = (props) => {
     };
   }, []);
 
+  const renderContent = (elem, i) => {
+    if (typeof elem === 'string') {
+      return (
+        <li key={i}>
+          <p className={styles.contentWrapper__description}>
+            {ReactHtmlParser(elem)}
+          </p>
+        </li>
+      );
+    }
+    return (
+      <li key={i} className={styles.forLine}>
+        <p>{elem.content}</p>
+        {!isMobile && <em>{elem.hint}</em>}
+        {elem.items && (
+          <ul className={styles.itemContent}>
+            {elem.items.map((item, i) => (
+              <li key={i}>
+                <p>
+                  <i className="fas fa-check" />
+                  {item.itemContent}
+                </p>
+                {!isMobile && <em>{item.itemHint}</em>}
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    );
+  };
+
   return (
     <article
       className={styles.block}
@@ -76,36 +107,7 @@ const PriceBlock = (props) => {
       {(!isMobile || isSelect) && ( //перевірка щоб для мобільних пристроїв контент відображався по кліку, а для великих екранів був одразу весь контент
         <div className={styles.contentWrapper}>
           <ul className={styles.forGreyLine}>
-            {description.map((elem, i) => {
-              if (typeof elem === 'string') {
-                return (
-                  <li key={i}>
-                    <p className={styles.contentWrapper__description}>
-                      {ReactHtmlParser(elem)}
-                    </p>
-                  </li>
-                );
-              }
-              return (
-                <li key={i} className={styles.forLine}>
-                  <p>{elem.content}</p>
-                  {!isMobile && <em>{elem.hint}</em>}
-                  {elem.items && (
-                    <ul className={styles.itemContent}>
-                      {elem.items.map((item, i) => (
-                        <li key={i}>
-                          <p>
-                            <i className="fas fa-check" />
-                            {item.itemContent}
-                          </p>
-                          {!isMobile && <em>{item.itemHint}</em>}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              );
-            })}
+            {description.map(renderContent)}
           </ul>
           <button
             className={styles.btnStart}
