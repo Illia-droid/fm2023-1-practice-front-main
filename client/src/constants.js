@@ -82,6 +82,12 @@ const CONSTANTS = {
       items: ['Terms of Service', 'Privacy Policy', 'Cookie Policy'],
     },
   ],
+  COLORS_PRICE: {
+    Bronze: '#e0b48d',
+    Gold: '#e8b954',
+    Platinum: '#555',
+    Managed: '#28d2d0',
+  },
 };
 
 export default CONSTANTS;

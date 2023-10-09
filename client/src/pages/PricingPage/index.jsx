@@ -1,12 +1,15 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import PricingBlock from '../../components/PricingBlock';
 
-const PricingPage = () => {
+import dataPricing from './dataPrice.json';
+
+const PricingPage = (props) => {
   return (
     <>
       <Header />
-      <h1>Price</h1>
+      <PricingBlock data={dataPricing.nameContent} />
       <Footer />
     </>
   );
