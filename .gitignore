@@ -12,4 +12,4 @@
 **server/public/*
 *server/public/*
 
-.node_modules
+node_modules/
