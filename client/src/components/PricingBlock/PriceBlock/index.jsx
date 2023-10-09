@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import CONSTANTS from '../../../constants';
 
 import styles from './PriceBlock.module.scss';
+
+import CONSTANTS from '../../../constants';
 
 const { COLORS_PRICE } = CONSTANTS;
 const PriceBlock = (props) => {
@@ -17,8 +18,10 @@ const PriceBlock = (props) => {
     isSelect,
     setSelected,
   } = props;
-
-  const [isMobile, setIsMobile] = useState(false);
+  /* якщо initialState поставити хардкорно false, та зробити ширину 
+  як на маленькому екрані і оновити сторінку, то стилі відображаються як для великого екрану*/
+  const initialIsMobile = window.innerWidth <= 900;
+  const [isMobile, setIsMobile] = useState(initialIsMobile);
   const handleCLick = () => {
     if (!isSelect) {
       return setSelected(id);

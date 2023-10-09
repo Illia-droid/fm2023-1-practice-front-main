@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter, NavLink } from 'react-router-dom';
-import styles from './Header.module.sass';
-import CONSTANTS from '../../constants';
+
 import { clearUserStore } from '../../store/slices/userSlice';
 import { getUser } from '../../store/slices/userSlice';
 import Logo from '../Logo';
 
+import styles from './Header.module.sass';
+import CONSTANTS from '../../constants';
 const Header = (props) => {
   useEffect(() => {
     if (!props.data) {
@@ -49,7 +50,7 @@ const Header = (props) => {
               </li>
               <li>
                 <Link to="/account" style={{ textDecoration: 'none' }}>
-                  <span>my Account</span>
+                  <span>My Account</span>
                 </Link>
               </li>
               <li>
@@ -57,7 +58,7 @@ const Header = (props) => {
                   to="http:/www.google.com"
                   style={{ textDecoration: 'none' }}
                 >
-                  <span>messages</span>
+                  <span>Messages</span>
                 </Link>
               </li>
               <li>
@@ -65,11 +66,11 @@ const Header = (props) => {
                   to="http:/www.google.com"
                   style={{ textDecoration: 'none' }}
                 >
-                  <span>affiliate dashboard</span>
+                  <span>Affiliate dashboard</span>
                 </Link>
               </li>
               <li>
-                <span onClick={logOut}>logout</span>
+                <span onClick={logOut}>Logout</span>
               </li>
             </ul>
           </div>
@@ -84,10 +85,10 @@ const Header = (props) => {
     return (
       <>
         <Link to="/login" style={{ textDecoration: 'none' }}>
-          <span className={styles.btn}>login</span>
+          <span className={styles.btn}>Login</span>
         </Link>
         <Link to="/registration" style={{ textDecoration: 'none' }}>
-          <span className={styles.btn}>sign UP</span>
+          <span className={styles.btn}>Sign UP</span>
         </Link>
       </>
     );
@@ -100,10 +101,10 @@ const Header = (props) => {
     <div className={styles.headerContainer}>
       <div className={styles.fixedHeader}>
         <span className={styles.info}>
-          squadhelp recognized as one of the Most Innovative Companies by Inc
+          Squadhelp recognized as one of the Most Innovative Companies by Inc
           Magazine.
         </span>
-        <a href="/">read Announcement</a>
+        <a href="/">Read announcement</a>
       </div>
       <div className={styles.loginSignnUpHeaders}>
         <div className={styles.numberContainer}>
@@ -127,35 +128,35 @@ const Header = (props) => {
           <div className={styles.nav}>
             <ul>
               <li>
-                <span>name IDEAS</span>
+                <span>Name ideas</span>
                 <img
                   src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`}
                   alt="menu"
                 />
                 <ul>
                   <li>
-                    <a href="/">beauty</a>
+                    <a href="/">Beauty</a>
                   </li>
                   <li>
-                    <a href="/">consulting</a>
+                    <a href="/">Consulting</a>
                   </li>
                   <li>
                     <a href="/">e-Commerce</a>
                   </li>
                   <li>
-                    <a href="/">fashion & Clothing</a>
+                    <a href="/">Fashion & Clothing</a>
                   </li>
                   <li>
-                    <a href="/">finance</a>
+                    <a href="/">Finance</a>
                   </li>
                   <li>
-                    <a href="/">real Estate</a>
+                    <a href="/">Real Estate</a>
                   </li>
                   <li>
-                    <a href="/">tech</a>
+                    <a href="/">Tech</a>
                   </li>
                   <li className={styles.last}>
-                    <a href="/">more Categories</a>
+                    <a href="/">More Categories</a>
                   </li>
                 </ul>
               </li>
@@ -167,25 +168,25 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <a href="/">HOW IT WORKS</a>
+                    <a href="/">How it works</a>
                   </li>
                   <li>
                     <NavLink to="/pricing">Pricing</NavLink>
                   </li>
                   <li>
-                    <a href="/">AGENCY SERVICE</a>
+                    <a href="/">Agency service</a>
                   </li>
                   <li>
-                    <a href="/">ACTIVE CONTESTS</a>
+                    <a href="/">Active contests</a>
                   </li>
                   <li>
-                    <a href="/">WINNERS</a>
+                    <a href="/">Winners</a>
                   </li>
                   <li>
-                    <a href="/">LEADERBOARD</a>
+                    <a href="/">Leaderboard</a>
                   </li>
                   <li className={styles.last}>
-                    <a href="/">BECOME A CREATIVE</a>
+                    <a href="/">Become a creative</a>
                   </li>
                 </ul>
               </li>
@@ -197,16 +198,16 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <a href="/">NAMES</a>
+                    <a href="/">Names</a>
                   </li>
                   <li>
-                    <a href="/">TAGLINES</a>
+                    <a href="/">Taglines</a>
                   </li>
                   <li>
-                    <a href="/">LOGOS</a>
+                    <a href="/">Logos</a>
                   </li>
                   <li className={styles.last}>
-                    <a href="/">TESTIMONIALS</a>
+                    <a href="/">Testimonials</a>
                   </li>
                 </ul>
               </li>
@@ -218,22 +219,22 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <a href="/">POPULAR NAMES</a>
+                    <a href="/">Popular names</a>
                   </li>
                   <li>
-                    <a href="/">SHORT NAMES</a>
+                    <a href="/">Short names</a>
                   </li>
                   <li>
-                    <a href="/">INTRIGUING NAMES</a>
+                    <a href="/">Intriguing names</a>
                   </li>
                   <li>
-                    <a href="/">NAMES BY CATEGORY</a>
+                    <a href="/">Names by category</a>
                   </li>
                   <li>
-                    <a href="/">VISUAL NAME SEARCH</a>
+                    <a href="/">Visual name search</a>
                   </li>
                   <li className={styles.last}>
-                    <a href="/">SELL YOUR DOMAINS</a>
+                    <a href="/">Sell your domains</a>
                   </li>
                 </ul>
               </li>
@@ -245,16 +246,16 @@ const Header = (props) => {
                 />
                 <ul>
                   <li>
-                    <a href="/">ULTIMATE NAMING GUIDE</a>
+                    <a href="/">Ultimate naming guide</a>
                   </li>
                   <li>
-                    <a href="/">POETIC DEVICES IN BUSINESS NAMING</a>
+                    <a href="/">Poetic devices in business naming</a>
                   </li>
                   <li>
-                    <a href="/">CROWDED BAR THEORY</a>
+                    <a href="/">Crowded bar theory</a>
                   </li>
                   <li className={styles.last}>
-                    <a href="/">ALL ARTICLES</a>
+                    <a href="/">All articles</a>
                   </li>
                 </ul>
               </li>
@@ -262,7 +263,7 @@ const Header = (props) => {
           </div>
           {props.data && props.data.role !== CONSTANTS.CREATOR && (
             <div className={styles.startContestBtn} onClick={startContests}>
-              START CONTEST
+              Start contest
             </div>
           )}
         </div>

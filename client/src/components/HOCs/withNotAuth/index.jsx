@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../../../store/slices/userSlice';
 import Spinner from '../../Spinner/Spinner';
-import { useDispatch, useSelector } from 'react-redux';
 
 const withNotAuth = (Component) => {
   return (props) => {
@@ -12,10 +12,6 @@ const withNotAuth = (Component) => {
     useEffect(() => {
       dispatch(getUser(history.replace)); //eslint-disable-next-line
     }, []);
-    // componentDidMount() {
-    //   props.checkAuth(props.history.replace);
-    // }
-
     if (isFetching) {
       return <Spinner mtop />;
     }
