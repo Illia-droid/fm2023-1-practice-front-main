@@ -89,7 +89,10 @@ const PriceBlock = (props) => {
                     <ul>
                       {elem.items.map((item, i) => (
                         <li key={i}>
-                          <p>&#10003;{item.itemContent}</p>
+                          <p>
+                            <i className="fas fa-check" />
+                            {item.itemContent}
+                          </p>
                           {!isMobile && <em>{item.itemHint}</em>}
                         </li>
                       ))}
@@ -103,7 +106,8 @@ const PriceBlock = (props) => {
             className={styles.btnStart}
             style={{ backgroundColor: colorText }}
           >
-            &#10003;Start
+            <i className="fas fa-check" />
+            Start
           </button>
         </div>
       )}
