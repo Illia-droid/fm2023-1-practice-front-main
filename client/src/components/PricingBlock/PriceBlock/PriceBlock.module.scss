@@ -4,6 +4,9 @@
   border: 5px solid transparent;
   margin: 10px 0;
   color: #666;
+  &:hover &__title {
+    box-shadow: 0 15px 15px #8f8f8f;
+  }
   &__title {
     display: flex;
     justify-content: space-between;
@@ -12,9 +15,7 @@
     box-sizing: border-box;
     padding: 16px;
     border: 10px solid transparent;
-    &:hover {
-      box-shadow: 0 15px 15px #8f8f8f;
-    }
+
     @media screen and (max-width: 900px) {
       display: flex;
       height: 68px;
